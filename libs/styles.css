@@ -1,0 +1,46 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, em, img, small, strike, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, nav, section, summary, time, mark, audio, video{padding: 0;margin: 0;border: 0;font-size: 100%;vertical-align: baseline;border-image: initial;}
+
+img.noaaWeatherIcon{
+float: left;
+width: 100px;
+height: 100px;
+padding: 10px 10px 10px 0;
+}
+
+div.current{
+font-family: Arial, sans-serif;
+font-size: 13px;
+line-height: 16px;
+width: 208px;
+}
+
+ul.forecast li{
+display: inline-block;
+width: 44px;
+height: 26px;
+margin-right: 14px;
+border-right: 1px solid #BDBDBD;
+padding-right: 14px;
+}
+
+ul.forecast li.last{border-right:none; margin-right:none;}
+
+ul.forecast{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+h2.next{
+    margin-top: 22px;
+    margin-bottom: 4px;
+}
+
+
+.day{font-weight: bold; color: #333}
+.high{color: #9b2020}
+.low{color: #01858d}
+.divider{color: #333}
+
+.source{font-size: 11px;}
+.clear{clear:both}
