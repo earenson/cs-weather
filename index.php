@@ -13,7 +13,7 @@
     /**
      * CitySync App: Weather
      * Author: Eric Arenson
-     * Version: 1.0
+     * Version: 1.2
      */
 
         $region = $_GET['region'];  // The context in which the app is being displayed
