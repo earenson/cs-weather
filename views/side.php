@@ -77,7 +77,7 @@ while($i<=$days-1){
             <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
         </div>
     </div>
-    <p class="attribution">Weather information provided by</p>
+    <p class="attribution">Weather information provided by <a href="http://weather.gov"><img src="images/noaa.gif" width="54" height="30" alt="National Oceanic and Atmospheric Administration / National Weather Service"></a></p>
 </div>
 
 <link href="libs/styles.css" rel="stylesheet" type="text/css">

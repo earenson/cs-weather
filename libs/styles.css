@@ -35,14 +35,22 @@ h2 {
 .center .attribution {
 	margin: 0 0 0 280px;
 }
+	.attribution a {
+		margin-left: 4px;
+	}
+	.attribution img {
+		vertical-align: middle;
+	}
 .now {
 	border-bottom: 1px solid #c9c9c9;
 	overflow: hidden;
 	padding: 8px 0 12px;
 }
 .now img {
+	height: auto;
 	float: left;
 	display: inline-block;
+	width: 50%;
 }
 .center .now {
 	border-bottom: 0 none;
@@ -57,8 +65,6 @@ h2 {
 	width: 48%;
 }
 .side img {
-	height: auto;
-	width: 50%;
 }
 .forecast {
 	font-size: 50%;
