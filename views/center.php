@@ -60,23 +60,26 @@ echo '</pre>';
         </div>
         <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
     </div>
+    
     <div class="forecast">
-    	<?php
-    		// We would want to create a loop for the rest of the forecast, no? I'm not sure how to do that, however:
-    		// foreach ($periods as $period) {
-    	?>
-        <div class="<?php echo $weatherArray[0]['period_name'] ?>">
-            <h2><?php echo $weatherArray[0]['period_name'] ?></h2>
-            <div class="data">
-                <p class="temp"><?php echo $weatherArray[0]['min_temp']; ?>&ordm;</p>
-                <p class="summary"><?php echo $weatherArray[0]['weather_summary_pm']; ?></p>
-            </div>
-            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>_night.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>">
-        </div>
-        <?php
-    		//	}
-    	?>
+	
+	<?php
+	    // The loop
+	    for($i=1; $i<=4; $i++){    
+	?>
+	<div class="day">
+	    
+	    <div class="day-name"><?php echo date("D",strtotime(substr($weatherArray[$i]['time_start'],0,-6))); ?></div>
+	    <div class="summary-icon"></div><img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[$i]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+</div>
+	    <div class="temp"><?php echo $weatherArray[$i]['max_temp'] ?>&ordm;</div>
+	</div>
+	<?php
+	    }
+	    // End loop
+	?>
     </div>
+
     <p class="attribution">Weather information provided by</p>
 </div>
 
