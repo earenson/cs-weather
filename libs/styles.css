@@ -1,46 +1,78 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, em, img, small, strike, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, nav, section, summary, time, mark, audio, video{padding: 0;margin: 0;border: 0;font-size: 100%;vertical-align: baseline;border-image: initial;}
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-img.noaaWeatherIcon{
-float: left;
-width: 100px;
-height: 100px;
-padding: 10px 10px 10px 0;
+.widget-side {
+	border: 1px solid #c9c9c9;
+	border-radius: 6px;
+	overflow: hidden;
+	padding: 10px;
+	width: 220px;
 }
-
-div.current{
-font-family: Arial, sans-serif;
-font-size: 13px;
-line-height: 16px;
-width: 208px;
+.widget-side h1 {
+	margin-bottom: 6px;
 }
-
-ul.forecast li{
-display: inline-block;
-width: 44px;
-height: 26px;
-margin-right: 14px;
-border-right: 1px solid #BDBDBD;
-padding-right: 14px;
+.widget-side h2 {
+	color: #878787;
+	margin-bottom: 4px;
+	text-transform: none;
 }
-
-ul.forecast li.last{border-right:none; margin-right:none;}
-
-ul.forecast{
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    margin-bottom: 14px;
+.widget-side .now {
+	border: 1px solid #c9c9c9;
+	border-width: 1px 0 1px 0;
+	overflow: hidden;
+	padding: 8px 0 12px;
 }
-
-h2.next{
-    margin-top: 22px;
-    margin-bottom: 4px;
+.widget-side img {
+	float: left;
+	display: inline-block;
 }
-
-
-.day{font-weight: bold; color: #333}
-.high{color: #9b2020}
-.low{color: #01858d}
-.divider{color: #333}
-
-.source{font-size: 11px;}
-.clear{clear:both}
+.widget-side .data {
+	float: right;
+	padding-left: 10px;
+	width: 50%;
+}
+.widget-side img {
+	height: auto;
+	width: 50%;
+}
+.widget-side .forecast {
+	font-size: 50%;
+}
+.widget-side .forecast,
+.widget-side .forecast > div {
+	clear: both;
+}
+	.widget-side .forecast img {
+		height: auto;
+		width: 36px;
+	}
+	.widget-side .forecast .data {
+		float: right;
+		padding: 10px 0 10px 10px;
+		width: 80%;
+	}
+	.widget-side .forecast .data p {
+		display: inline;
+	}
+	.widget-side .forecast .data .temp {
+		margin-right: 12px;
+	}
+.widget-side .tonight {
+	border-bottom: 1px solid #c9c9c9;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+.widget-side .tomorrow {
+	overflow: hidden;
+	margin-bottom: 26px;
+}
+.temp {
+	font-size: 300%;
+	margin: 16px 0;
+}
+.summary {
+	color: #878787;
+	font-size: 14px;
+}
+.attribution {
+	font-size: 11px;
+}
