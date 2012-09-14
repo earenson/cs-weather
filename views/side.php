@@ -7,8 +7,8 @@ $days = 5;
 
 // Pulling some data from NOAA API
 $xmlDoc = simplexml_load_file('http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?lat=45.51&lon=-122.68&format=12+hourly&numDays='.$days);
-
 // $xmlDoc = simplexml_load_file('sample-return.xml'); // Sample file for testing
+
 $weatherData = $xmlDoc->data;
 
 // the XML nodes from NOAA have hyphens in the node names, which trip up the parser. They need 
@@ -49,8 +49,7 @@ while($i<=$days-1){
 ?>
 
 
-<div class="widget side">
-    <h1>Local Weather</h1>
+<div class="side">
     <div class="now">
         <div class="data">
             <h2>Now</h2>
@@ -71,7 +70,7 @@ while($i<=$days-1){
         <div class="tomorrow">
             <h2>Tomorrow</h2>
             <div class="data">
-                <p class="temp"><?php echo $weatherArray[1]['min_temp']; ?>&ordm;</p>
+                <p class="temp"><?php echo $weatherArray[1]['max_temp']; ?>&ordm;</p>
                 <p class="summary"><?php echo $weatherArray[1]['weather_summary_pm']; ?></p>
             </div>
             <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
