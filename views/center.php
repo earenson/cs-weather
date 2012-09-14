@@ -71,7 +71,7 @@ while($i<=$days-1){
 			    <h2 class="day-name"><?php echo date("D",strtotime(substr($weatherArray[$i]['time_start'],0,-6))); ?></h2>
 			    <p class="temp"><?php echo $weatherArray[$i]['max_temp'] ?>&ordm;</p>
 			</div>
-		    <img class="summary-icon" src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[$i]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+		    <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[$i]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
 		</div>
 		<?php
 		    }
