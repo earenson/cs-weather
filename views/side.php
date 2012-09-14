@@ -7,8 +7,8 @@ $days = 5;
 
 // Pulling some data from NOAA API
 $xmlDoc = simplexml_load_file('http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?lat=45.51&lon=-122.68&format=12+hourly&numDays='.$days);
-
 // $xmlDoc = simplexml_load_file('sample-return.xml'); // Sample file for testing
+
 $weatherData = $xmlDoc->data;
 
 // the XML nodes from NOAA have hyphens in the node names, which trip up the parser. They need 
@@ -50,7 +50,6 @@ while($i<=$days-1){
 
 
 <div class="widget side">
-    <h1>Local Weather</h1>
     <div class="now">
         <div class="data">
             <h2>Now</h2>
