@@ -70,7 +70,7 @@ while($i<=$days-1){
         <div class="tomorrow">
             <h2>Tomorrow</h2>
             <div class="data">
-                <p class="temp"><?php echo $weatherArray[1]['min_temp']; ?>&ordm;</p>
+                <p class="temp"><?php echo $weatherArray[1]['max_temp']; ?>&ordm;</p>
                 <p class="summary"><?php echo $weatherArray[1]['weather_summary_pm']; ?></p>
             </div>
             <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
