@@ -49,7 +49,7 @@ while($i<=$days-1){
 ?>
 
 
-<div class="widget side">
+<div class="side">
     <div class="now">
         <div class="data">
             <h2>Now</h2>
