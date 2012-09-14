@@ -42,15 +42,15 @@ while($i<=$days-1){
     
 }
 
-echo '<pre>';
-print_r($weatherArray);
-echo '</pre>';
+// echo '<pre>';
+// print_r($weatherArray);
+// echo '</pre>';
 
 
 ?>
 
 
-<div class="widget-center">
+<div class="widget center">
     <h1>Local Weather</h1>
     <div class="now">
         <div class="data">
@@ -62,22 +62,21 @@ echo '</pre>';
     </div>
     
     <div class="forecast">
-	
-	<?php
-	    // The loop
-	    for($i=1; $i<=4; $i++){    
-	?>
-	<div class="day">
-	    
-	    <div class="day-name"><?php echo date("D",strtotime(substr($weatherArray[$i]['time_start'],0,-6))); ?></div>
-	    <div class="summary-icon"></div><img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[$i]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
-</div>
-	    <div class="temp"><?php echo $weatherArray[$i]['max_temp'] ?>&ordm;</div>
-	</div>
-	<?php
-	    }
-	    // End loop
-	?>
+		<?php
+		    // The loop
+		    for($i=1; $i<=4; $i++){    
+		?>
+		<div class="day">
+			<div class="data">
+			    <h2 class="day-name"><?php echo date("D",strtotime(substr($weatherArray[$i]['time_start'],0,-6))); ?></h2>
+			    <p class="temp"><?php echo $weatherArray[$i]['max_temp'] ?>&ordm;</p>
+			</div>
+		    <img class="summary-icon" src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[$i]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+		</div>
+		<?php
+		    }
+		    // End loop
+		?>
     </div>
 
     <p class="attribution">Weather information provided by</p>

@@ -49,7 +49,7 @@ while($i<=$days-1){
 ?>
 
 
-<div class="widget-side">
+<div class="widget side">
     <h1>Local Weather</h1>
     <div class="now">
         <div class="data">
