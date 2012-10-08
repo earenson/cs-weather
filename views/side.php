@@ -11,7 +11,7 @@ $xmlDoc = simplexml_load_file('http://graphical.weather.gov/xml/sample_products/
 
 $weatherData = $xmlDoc->data;
 print "<pre>";
-print_r($weatherData->parameters);
+print_r($weatherData);
 print "</pre>";
 // the XML nodes from NOAA have hyphens in the node names, which trip up the parser. They need 
 // to be accessed as {'node-name'}
