@@ -36,6 +36,7 @@ h2 {
 	margin: 0 0 0 280px;
 }
 	.attribution a {
+		border: 0 none;
 		margin-left: 4px;
 	}
 	.attribution img {
