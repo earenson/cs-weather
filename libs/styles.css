@@ -40,6 +40,7 @@ h2 {
 		margin-left: 4px;
 	}
 	.attribution img {
+		border: 0 none;
 		vertical-align: middle;
 	}
 .now {
