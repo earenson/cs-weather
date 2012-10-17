@@ -63,13 +63,14 @@ h2 {
 .side .data,
 .center .now .data {
 	float: right;
-	padding-left: 10px;
+	padding-left: 0;
 	width: 48%;
 }
 .side img {
 }
 .forecast {
 	font-size: 50%;
+	margin-left: 10px;
 }
 .side .forecast,
 .side .forecast > div {
@@ -81,14 +82,14 @@ h2 {
 	}
 	.side .forecast .data {
 		float: right;
-		padding: 10px 0 10px 10px;
+		padding: 10px 0 10px 0;
 		width: 80%;
 	}
 	.side .forecast .data p {
 		display: inline;
 	}
 	.side .forecast .data .temp {
-		margin-right: 24px;
+		margin-right: 14px;
 	}
 .side .tonight {
 	border-bottom: 1px solid #c9c9c9;
