@@ -70,9 +70,9 @@ while($i<=$days-1){
             <h2>Tomorrow's High</h2>
             <div class="data">
                 <p class="temp"><?php echo $weatherArray[1]['max_temp']; ?>&ordm;</p>
-                <p class="summary"><?php echo $weatherArray[1]['weather_summary_pm']; ?></p>
+                <p class="summary"><?php echo $weatherArray[1]['weather_summary_am']; ?></p>
             </div>
-            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+        <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[1]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[1]['weather_summary_am'])) ?>">
         </div>
     </div>
     <p class="attribution">Weather information provided by <a href="http://weather.gov"><img src="images/noaa.gif" width="54" height="30" alt="National Oceanic and Atmospheric Administration / National Weather Service"></a></p>
