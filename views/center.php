@@ -53,7 +53,7 @@ while($i<=$days-1){
 <div class="center">
     <div class="now">
         <div class="data">
-            <h2>Now</h2>
+            <h2>Today's High</h2>
             <p class="temp"><?php echo $weatherArray[0]['max_temp'] ?>&ordm;</p>
             <p class="summary"><?php echo $weatherArray[0]['weather_summary_am']; ?></p>
         </div>

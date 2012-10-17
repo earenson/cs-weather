@@ -52,7 +52,7 @@ h2 {
 	height: auto;
 	float: left;
 	display: inline-block;
-	width: 50%;
+	width: 47%;
 }
 .center .now {
 	border-bottom: 0 none;
@@ -63,13 +63,17 @@ h2 {
 .side .data,
 .center .now .data {
 	float: right;
-	padding-left: 0;
-	width: 48%;
+	width: 53%;
+}
+.center .now .data {
+	padding-left: 10px;
 }
 .side img {
 }
 .forecast {
 	font-size: 50%;
+}
+.side .forecast{
 	margin-left: 10px;
 }
 .side .forecast,
