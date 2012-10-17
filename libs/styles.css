@@ -37,7 +37,7 @@ h2 {
 }
 	.attribution a {
 		border: 0 none;
-		margin-left: 4px;
+		margin-left: 2px;
 	}
 	.attribution img {
 		border: 0 none;
@@ -63,18 +63,11 @@ h2 {
 .side .data,
 .center .now .data {
 	float: right;
-	width: 53%;
-}
-.center .now .data {
 	padding-left: 10px;
-}
-.side img {
+	width: 53%;
 }
 .forecast {
 	font-size: 50%;
-}
-.side .forecast{
-	margin-left: 10px;
 }
 .side .forecast,
 .side .forecast > div {
@@ -87,13 +80,13 @@ h2 {
 	.side .forecast .data {
 		float: right;
 		padding: 10px 0 10px 0;
-		width: 80%;
+		width: 82%;
 	}
 	.side .forecast .data p {
 		display: inline;
 	}
 	.side .forecast .data .temp {
-		margin-right: 14px;
+		margin-right: 8px;
 	}
 .side .tonight {
 	border-bottom: 1px solid #c9c9c9;
