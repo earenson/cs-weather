@@ -1,7 +1,5 @@
 <?php 
 
-// In practice, the simplexml_load_file call should pass the user's lat & long given to the app by CitySync
-
 // Init some vars
 $days = 5;
 
@@ -12,10 +10,6 @@ $xmlDoc = simplexml_load_file('http://graphical.weather.gov/xml/sample_products/
 $weatherData = $xmlDoc->data;
 // the XML nodes from NOAA have hyphens in the node names, which trip up the parser. They need 
 // to be accessed as {'node-name'}
-
-// echo '<pre>';
-// print_r($weatherData);
-// echo '</pre>';
 
 // Build weather array from XML feed
 $i = 0;
@@ -40,43 +34,41 @@ while($i<=$days-1){
     
 }
 
-// echo '<pre>';
-// print_r($weatherArray);
-// echo '</pre>';
-
-
 ?>
-
 
 <div class="side">
     <div class="now">
         <div class="data">
-            <h2>Today's High</h2>
-            <p class="temp"><?php echo $weatherArray[0]['max_temp'] ?>&ordm;</p>
-            <p class="summary"><?php echo $weatherArray[0]['weather_summary_am']; ?></p>
+            <h2>Currently</h2>
+            <p class="temp"></p>
+            <p class="summary"></p>
         </div>
-        <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+        <img src="">
     </div>
+    
     <div class="forecast">
         <div class="tonight">
             <h2>Tonight's Low</h2>
             <div class="data">
-                <p class="temp"><?php echo $weatherArray[0]['min_temp']; ?>&ordm;</p>
+                <p class="temp"><?php echo $weatherArray[0]['max_temp']; ?>&ordm;</p>
                 <p class="summary"><?php echo $weatherArray[0]['weather_summary_pm']; ?></p>
             </div>
-            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>_night.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>">
+            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
         </div>
         <div class="tomorrow">
             <h2>Tomorrow's High</h2>
             <div class="data">
                 <p class="temp"><?php echo $weatherArray[1]['max_temp']; ?>&ordm;</p>
-                <p class="summary"><?php echo $weatherArray[1]['weather_summary_pm']; ?></p>
+                <p class="summary"><?php echo $weatherArray[1]['weather_summary_am']; ?></p>
             </div>
-            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+        <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[1]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[1]['weather_summary_am'])) ?>">
         </div>
     </div>
-    <p class="attribution">Weather information provided by <a href="http://weather.gov"><img src="images/noaa.gif" width="54" height="30" alt="National Oceanic and Atmospheric Administration / National Weather Service"></a></p>
+    <p class="attribution">
+        Current weather provided by <a href="">Dark Skies</a><br>
+        Forecast information provided by <a href="http://weather.gov"><img src="images/noaa.gif" width="54" height="30" alt="National Oceanic and Atmospheric Administration / National Weather Service"></a>
+    </p>
 </div>
 
 <link href="libs/styles.css" rel="stylesheet" type="text/css">
-
+<script src="libs/weather-side.js" type="text/javascript"></script>

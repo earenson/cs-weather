@@ -5,7 +5,7 @@
     <link href="http://pdxcitysync.org/apps/citysync_styles.css" rel="stylesheet" type="text/css">
 </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <script src="http://pdxcitysync.org/apps/citysync-app.js" type="text/javascript"></script>
+    <script src="http://pdxcitysync.local:8888/apps/citysync-app.js" type="text/javascript"></script>
 
 <body>
     <?php
@@ -13,7 +13,8 @@
     /**
      * CitySync App: Weather
      * Author: Eric Arenson
-     * Version: 1.1
+     * Version: 1.4
+     * - Adding Dark Sky API call for Current Temp
      */
 
         $region = $_GET['region'];  // The context in which the app is being displayed
@@ -37,7 +38,7 @@
     $(function(){
         var init = CitySync.init({
             appID:'1234',
-            appURL:'pass'
+            appURL:'pass' // temp credentials
         });
     });
     

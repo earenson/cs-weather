@@ -41,6 +41,8 @@ h2 {
 	}
 	.attribution img {
 		vertical-align: middle;
+		width: 36px;
+height: 20px;
 	}
 .now {
 	border-bottom: 1px solid #c9c9c9;
