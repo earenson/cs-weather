@@ -20,7 +20,7 @@ var App = function(){
                     $('div.now p.summary').text(data.hourSummary).css('textTransform','captalize');
                     $('div.now img').attr('src','images/'+data.hourSummary+'.png').attr('alt',data.hourSummary);
                     
-                    CitySync.resizeFrame(document.body.scrollHeight, smocket);
+                    CitySync.resizeFrame(document.body.scrollHeight, socket);
                 }    
             );
         }
