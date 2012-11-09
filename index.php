@@ -5,7 +5,7 @@
     <link href="http://pdxcitysync.org/apps/citysync_styles.css" rel="stylesheet" type="text/css">
 </head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <script src="http://pdxcitysync.local:8888/apps/citysync-app.js" type="text/javascript"></script>
+    <script src="http://pdxcitysync.org/apps/citysync-app.js" type="text/javascript"></script>
 
 <body>
     <?php
