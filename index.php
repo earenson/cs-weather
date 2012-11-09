@@ -33,15 +33,6 @@
         }
     
     ?>
-    <script type="text/javascript">
-    
-    $(function(){
-        var init = CitySync.init({
-            appID:'1234',
-            appURL:'pass' // temp credentials
-        });
-    });
-    
-    </script>
+
 </body>
 </html>

@@ -28,32 +28,11 @@ var App = function(){
 };
 
 $(function(){
-    
-    console.log(CitySync);
-    
+    // The connect method creates the socket and establishes the connection,
+    // and provides a callback to let you know when everything is ready to go.
     CitySync.connect(function(){
-        console.log("Connected");
-        console.log(CitySync.user);
+        var app = App();
+        app.getCurrentWeather();
     });
-      
-    /*
-// Create new socket        
-    smocket = new easyXDM.Socket({
-        onReady:  function(){
-            CitySync.resizeFrame(document.body.scrollHeight, smocket);
-  			CitySync.getUserData(smocket);
-        },
-        onMessage: function(message){
-            CitySync.routeMessage(message);
-
-            parsed = JSON.parse(message);
-            if(parsed.type=="userdata"){
-                var app = App();
-                app.getCurrentWeather();
-            }
-            
-        }
-    });
-*/
-         
+               
 });
