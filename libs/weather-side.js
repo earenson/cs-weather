@@ -28,8 +28,16 @@ var App = function(){
 };
 
 $(function(){
+    
+    console.log(CitySync);
+    
+    CitySync.connect(function(){
+        console.log("Connected");
+        console.log(CitySync.user);
+    });
       
-    // Create new socket        
+    /*
+// Create new socket        
     smocket = new easyXDM.Socket({
         onReady:  function(){
             CitySync.resizeFrame(document.body.scrollHeight, smocket);
@@ -46,5 +54,6 @@ $(function(){
             
         }
     });
+*/
          
 });
