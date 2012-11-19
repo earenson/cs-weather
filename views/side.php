@@ -33,7 +33,7 @@ while($i<=$days-1){
     $i++;
     
 }
-print"<div style='display:none;'><pre>" . print_r($weatherArray) . "</pre></div>";
+//print"<div style='display:none;'><pre>" . print_r($weatherArray) . "</pre></div>";
 ?>
 
 <div class="side">
