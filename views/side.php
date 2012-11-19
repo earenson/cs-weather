@@ -33,7 +33,7 @@ while($i<=$days-1){
     $i++;
     
 }
-
+print"<div style='display:none;'><pre>" . print_r($weatherArray) . "</pre></div>";
 ?>
 
 <div class="side">
@@ -43,7 +43,7 @@ while($i<=$days-1){
             <p class="temp"></p>
             <p class="summary"></p>
         </div>
-        <img src="">
+        <img src="images/<?php echo $weatherArray[0]['weather_summary_pm']; ?>.png" alt="<?php echo $weatherArray[0]['weather_summary_pm']; ?>" title="<?php echo $weatherArray[0]['weather_summary_pm']; ?>" />
     </div>
     
     <div class="forecast">

@@ -15,10 +15,14 @@ var App = function(){
                     lon:CitySync.user.location.long
                 },
                 function(data){
-                    console.log(data);
+                    //console.log(data);
                     $('div.now p.temp').html(data.currentTemp + "&ordm;");
-                    $('div.now p.summary').text(data.hourSummary).css('textTransform','captalize');
-                    $('div.now img').attr('src','images/'+data.hourSummary+'.png').attr('alt',data.hourSummary);
+                    $('div.now p.summary').text(data.currentSummary).css('textTransform','captalize');
+					if(data.currentSummary!=data.hourSummary){
+						$('div.now p.summary').append("<br />" + data.hourSummary).css('textTransform','captalize');
+					}
+					//use image src desc from NOAA
+                    //$('div.now img').attr('src','images/'+data.hourSummary+'.png').attr('alt',data.hourSummary);
                     
                     CitySync.resizeFrame(document.body.scrollHeight, socket);
                 }    
