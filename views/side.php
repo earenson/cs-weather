@@ -33,7 +33,6 @@ while($i<=$days-1){
     $i++;
     
 }
-//print"<div style='display:none;'><pre>" . print_r($weatherArray) . "</pre></div>";
 ?>
 
 <div class="side">
@@ -43,17 +42,17 @@ while($i<=$days-1){
             <p class="temp"></p>
             <p class="summary"></p>
         </div>
-        <img src="images/<?php echo $weatherArray[0]['weather_summary_pm']; ?>.png" alt="<?php echo $weatherArray[0]['weather_summary_pm']; ?>" title="<?php echo $weatherArray[0]['weather_summary_pm']; ?>" />
+        <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>" />
     </div>
     
     <div class="forecast">
         <div class="tonight">
             <h2>Tonight's Low</h2>
             <div class="data">
-                <p class="temp"><?php echo $weatherArray[0]['max_temp']; ?>&ordm;</p>
+                <p class="temp"><?php echo $weatherArray[0]['min_temp']; ?>&ordm;</p>
                 <p class="summary"><?php echo $weatherArray[0]['weather_summary_pm']; ?></p>
             </div>
-            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_am'])) ?>">
+            <img src="images/<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>.png" alt="<?php echo strtolower(str_replace(" ","-",$weatherArray[0]['weather_summary_pm'])) ?>">
         </div>
         <div class="tomorrow">
             <h2>Tomorrow's High</h2>
