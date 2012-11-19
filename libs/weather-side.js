@@ -15,7 +15,7 @@ var App = function(){
                     lon:CitySync.user.location.long
                 },
                 function(data){
-                    //console.log(data);
+                    console.log(data);
                     $('div.now p.temp').html(data.currentTemp + "&ordm;");
                     $('div.now p.summary').text(data.hourSummary).css('textTransform','captalize');
                     $('div.now img').attr('src','images/'+data.hourSummary+'.png').attr('alt',data.hourSummary);
